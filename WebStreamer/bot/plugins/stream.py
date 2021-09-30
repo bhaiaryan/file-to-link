@@ -23,7 +23,8 @@ async def media_receive_handler(_, m: Message):
     stream_link = Var.URL + 'stream/' + str(log_msg.message_id)
     online_link = Var.URL + str(log_msg.message_id)
     await m.reply_text(
-        text="`{}`".format(stream_link), "`{}`".format(stream_link)
+        text="`{}`".format(stream_link),
+             "`{}`".format(stream_link),
         quote=True,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('Stream', url=stream_link),
                                             InlineKeyboardButton('Download', url=online_link)]])
